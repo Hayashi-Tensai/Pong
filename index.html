@@ -41,4 +41,18 @@
 	</script>
 	
 </body>
+<script>
+	//! keys to block default behaviour for HTML5 games
+    	var arrKeys = new Array(38,40,83,87);
+    
+	$(document).keydown(function (e) {
+	var key = e.which;
+	if($.inArray(key, arrKeys) > -1) {
+	    e.preventDefault();
+	    return false;
+	}
+	return true;
+	});
+</script>
+	
 </html>
